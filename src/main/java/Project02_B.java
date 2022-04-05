@@ -1,3 +1,4 @@
+import kr.inflearn.DownloadBroker;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -27,6 +28,30 @@ public class Project02_B {
                 System.out.println(li.select(".num").first().text());
                 System.out.println(li.select(".info").first().text());
             }
+
+            //resource download
+//            Element tag= doc.select("source").first();
+//            String dPath= tag.attr("src").trim();
+////            System.out.println(dPath);
+//            String fileName=dPath.substring(dPath.lastIndexOf("/")+1);
+
+            Element tag= doc.select(".img > img").first();
+            String dPath= "https://sum.su.or.kr:8888"+ tag.attr("src").trim();
+            String fileName=dPath.substring(dPath.lastIndexOf("/")+1);
+            Runnable r=new DownloadBroker(dPath, fileName);
+            Thread dLoad=new Thread(r);
+            dLoad.start();
+            for (int i=0; i<10; i++){
+                try {
+                    Thread.sleep(1000);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                System.out.println(""+(i+1));
+            }
+            System.out.println();
+            System.out.println("======================");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
