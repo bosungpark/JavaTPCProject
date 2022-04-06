@@ -72,10 +72,6 @@ public class Project03_D {
 //                System.out.println(fileName);
                 System.out.println(vo);
 
-
-
-
-
             }else {
                 System.out.println("검색 데이터가 없습니다.");
             }
