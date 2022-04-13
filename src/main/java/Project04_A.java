@@ -41,6 +41,30 @@ public class Project04_A {
                 table.addCell(cell);
             }
             table.completeRow();
+
+            for (String[] row : rows) {
+                for (String data : row) {
+                    Phrase phrase= new Phrase(data, fontRows);
+                    PdfPCell cell= new PdfPCell(phrase);
+                    cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+                    cell.setPaddingTop(20);
+                    cell.setPaddingRight(20);
+                    cell.setPaddingLeft(20);
+                    cell.setPaddingBottom(20);
+                    table.addCell(cell);
+                }
+                table.completeRow();
+            }
+
+            PdfPCell cell4=new PdfPCell(new Phrase("Cell 5"));
+            cell4.setColspan(2);
+
+            PdfPCell cell5=new PdfPCell(new Phrase("Cell 6"));
+            cell5.setColspan(2);
+
+            table.addCell(cell4);
+            table.addCell(cell5);
+
             doc.addTitle("PDF Table Demo");
             doc.add(table);
             System.out.println("table has created");
