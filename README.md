@@ -21,4 +21,4 @@ JAVA를 이용해 만들수 있는 아주 간단한 프로젝트 들을 실습�
 
 6.Java Socket Multi-Chatting 프로젝트
 
-<img width="300" alt="스크린샷 2022-04-14 오후 5 04 59" src="https://user-images.githubusercontent.com/81157873/163342024-2a9a6b7b-1052-4d20-8ee9-36865b5675f0.png">
+<img width="900" alt="스크린샷 2022-04-14 오후 5 04 59" src="https://user-images.githubusercontent.com/81157873/163342024-2a9a6b7b-1052-4d20-8ee9-36865b5675f0.png">
